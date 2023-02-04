@@ -1,0 +1,15 @@
+{
+  "name": "minecraftstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch --p 8080 db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.1",
+    "sass": "^1.57.1"
+  }
+}

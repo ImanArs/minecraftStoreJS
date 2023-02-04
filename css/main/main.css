@@ -1,0 +1,111 @@
+.products {
+  padding-top: 15vh;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  box-sizing: border-box;
+}
+.products .product_Card {
+  border: 1px solid #000;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+.products .product_Card .top_Card {
+  position: relative;
+  padding-bottom: 50px;
+}
+.products .product_Card .top_Card img {
+  width: 200px;
+}
+.products .product_Card .top_Card .quickView {
+  display: none;
+}
+.products .product_Card .top_Card:hover .quickView {
+  display: block;
+  position: absolute;
+  left: 30%;
+  bottom: 10px;
+}
+.products .product_Card .top_Card:hover .quickView button {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px outset #0dbd5c;
+  background: #128f4a;
+  transition: 0.1s ease-in-out;
+  color: #fff;
+}
+.products .product_Card .top_Card:hover .quickView button:hover {
+  border: 2px inset #2caa65;
+  background: #0e7a40;
+}
+.modal .modalItem {
+  max-width: 1440px;
+  position: fixed;
+  padding: 30px;
+  max-width: 1440px;
+  width: 70%;
+  height: 450px;
+  top: 10%;
+  left: 10%;
+  background: rgb(11, 89, 37);
+  color: #fff;
+  z-index: 10;
+  align-items: center;
+  border: 3px solid #000;
+  margin: 0 auto;
+}
+.modal .modalItem_top {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+}
+.modal .modalItem_top h2 {
+  font-size: 20px;
+}
+.modal .modalItem_top button {
+  padding: 10px 15px;
+  font-size: 20px;
+  background: red;
+  color: #000;
+  border: 2px solid #000;
+}
+.modal .modalItem_desc {
+  padding: 15px 0;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}
+.modal .modalItem_desc img {
+  width: 270px;
+}
+.modal .modalItem_desc p {
+  color: #fff;
+}
+.modal .modalItem .buyButton button {
+  padding: 10px 15px;
+  color: #fff;
+  background: rgb(5, 114, 20);
+}
+
+.modalError_Wrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+.modalError_Wrapper p {
+  padding: 25px;
+  background: green;
+  width: 700px;
+  height: 100px;
+  left: 20%;
+  margin: 250px auto;
+  z-index: 10;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

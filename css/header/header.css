@@ -1,0 +1,126 @@
+header {
+  position: relative;
+  z-index: 9;
+  max-width: 1440px;
+  width: 100%;
+  background: #333;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+header .logo {
+  width: 50%;
+}
+header .logo img {
+  width: 100%;
+}
+header .search form {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+header .search form select {
+  color: #fff;
+  padding: 11.5px;
+  background: #128f4a;
+  border: none;
+  outline: none;
+}
+header .search form select option {
+  background: rgba(18, 143, 74, 0.6392156863);
+}
+header .search form input {
+  color: #fff;
+  padding: 11.5px;
+  background: #128f4a;
+  outline: none;
+  border: none;
+}
+header .search form button {
+  width: 9%;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 3px outset #0dbd5c;
+  background: #128f4a;
+}
+header .search form button img {
+  width: 100%;
+}
+header .userTools {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+header .userTools img {
+  width: 22px;
+  margin: 10px;
+  cursor: pointer;
+}
+header .userTools button {
+  padding: 15px 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 5px outset #0dbd5c;
+  background: #128f4a;
+  transition: 0.1s ease-in-out;
+  color: #fff;
+}
+header .userTools button:hover {
+  border: 5px inset #2caa65;
+  background: #0e7a40;
+}
+
+.productBlock {
+  position: absolute;
+  padding: 15px 0;
+  z-index: 7;
+  width: 100%;
+  min-height: 0px;
+  top: 55px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 15px;
+}
+.productBlock::-webkit-scrollbar {
+  background: #333;
+}
+.productBlock::-webkit-scrollbar-thumb {
+  background: #096b35;
+  border-radius: 15px;
+}
+.productBlock .cardProduct {
+  width: 500px;
+  background: #fff;
+  color: #000;
+}
+.productBlock .cardProduct img {
+  width: 150px;
+}
+
+.cart {
+  position: absolute;
+  background: #fff;
+  right: 0;
+  top: 10px;
+  visibility: hidden;
+  min-height: 100vh;
+}
+.cart .cartProd {
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: row;
+}
+.cart .cartProd img {
+  width: 100px;
+}
+.active {
+  visibility: visible;
+  transform: scaleX(1);
+}/*# sourceMappingURL=header.css.map */

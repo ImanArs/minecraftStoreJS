@@ -1,0 +1,14 @@
+@import "./header/header.css";
+@import "./footer/footer.css";
+@import "./main/main.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.block {
+  background: url("https://cdn.shopify.com/s/files/1/0266/4841/2351/t/27/assets/whiteBottomBlocks.png?v=90429732153909636651668030118");
+  background-repeat: no-repeat;
+  background-size: contain;
+}/*# sourceMappingURL=index.css.map */

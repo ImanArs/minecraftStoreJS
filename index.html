@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/images/logo-minecraft.svg" alt="">
+        </div>
+        <section class="search">
+            <form onsubmit="inputOutPut(event)" id="formSearch">
+                <select name="" id="select">
+                    <option value="plushie">plushie</option>
+                    <option value="accessory">accessory</option>
+                    <option value="book">book</option>
+                </select>
+                <input type="text" id="inputSearch">
+                <button type="submit">
+                    <img src="./assets/icons/search.png" alt="">
+                </button>
+            </form>
+        </section>
+        <section class="userTools">
+            <img src="./assets/icons/user.png" onclick="changeLogin()" alt="">
+            <img src="./assets/icons/heart.png" alt="">
+            <button onclick="getFav()">checkout</button>
+        </section>
+        <div class="cart" id="cart">
+            <div onclick="closeCart()">X</div>
+            <div id="cartWrapper"></div>
+        </div>
+    </header>
+    <div class="productBlock" id="productBlock">введите запрос</div>
+    <aside class="filter" id="aside"></aside>
+    <section class="products"></section>
+    <div class="modal" id="modal"></div>
+    <div class="modalError" id="modalError">qwe</div>
+    <!-- <footer>
+        <article class="footer_top">
+            <h4>FOLLOW MINECRAFT</h4>
+            <section class="footer_top_links">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 48.7 75.5">
+                    <polygon points="16.7,1.8 46.5,1.8 46.5,17.3 31.6,17.3 31.6,27.7 46.5,27.7 46.5,43.2 31.6,43.2 31.6,74.2 11.8,74.2 11.8,43.2 
+                        1.8,43.2 1.8,27.7 11.8,27.7 11.8,7 16.7,7 "></polygon>
+                </svg>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 76.7 75.5">
+                    <g>
+                        <path class="st0" d="M53.8,32.7V22.4H43.4v10.4H53.8z M53.8,1.7H43.4v5.2h-5.2v10.4h-5.2v5.2h-5.2v5.2h-5.2v-5.2H12.4v-5.2H7.2V12
+                            H2v25.9h5.2v5.2h5.2v5.2h5.2v5.2h5.2v5.2H7.2v-5.2H2v5.2h5.2v5.2h5.2V69h10.4v5.2h20.7V69h5.2v-5.2h5.2v-5.2H59v-5.2h5.2V43.1h10.4
+                            v-5.2h-5.2v-5.2h5.2v-5.2h-5.2v5.2h-5.2V22.4H59v-5.2h-5.2V12H43.4V6.8h10.4V1.7z"></path>
+                    </g>
+                </svg>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram" viewBox="0 0 73.8 75.5">
+                    <g>
+                        <path d="M51.7,38v10.3h-5v5.2H26.7v-5.2h-5V32.8h5v-5.2h20.1v5.2h5V38z M41.7,22.5H21.7v5.2h-5v25.8h5v5.2h30.1v-5.2h5V27.7h-5
+                            v-5.2H41.7z"></path>
+                        <rect x="51.7" y="12.2" width="10" height="10.3"></rect>
+                        <path d="M66.8,17.3v46.5h-5V69H11.6v-5.2h-5V12.2h5V7h50.1v5.2h5V17.3z M66.8,7V1.8H6.6V7h-5v62h5v5.2h60.2V69h5V7H66.8z"></path>
+                    </g>
+                </svg>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 100 75.5">
+                    <path d="M63.3,40.3h-6.6v6.8h-6.6v6.8h-6.6V20.1h6.6v6.8h6.6v6.8h6.6V40.3z M92,8.8V2.1H8.3v6.8H1.7v58.5h6.6v6.8H92v-6.8h6.6V8.8H92z"></path>
+                </svg>
+            </section>
+        </article>
+    </footer> -->
+    <script src="./js/index.js"></script>
+    <script src="./js/aside.js"></script>
+    <script src="./js/fetch.js"></script>
+    <script src="./js/favorites.js" type="module"></script>
+</body>
+</html>
