@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="./assets/images/logo-minecraft.svg" alt="">
+            <div id="userName"></div>
         </div>
         <section class="search">
             <form onsubmit="inputOutPut(event)" id="formSearch">
@@ -26,12 +30,13 @@
             </form>
         </section>
         <section class="userTools">
-            <img src="./assets/icons/user.png" onclick="changeLogin()" alt="">
+            <img src="./assets/icons/user.png" id="login" onclick="Login()" alt="">
+            <div id="loginTools"></div>
             <img src="./assets/icons/heart.png" alt="">
             <button onclick="getFav()">checkout</button>
         </section>
         <div class="cart" id="cart">
-            <div onclick="closeCart()">X</div>
+            <button onclick="closeCart()">X</button>
             <div id="cartWrapper"></div>
         </div>
     </header>
@@ -39,7 +44,7 @@
     <aside class="filter" id="aside"></aside>
     <section class="products"></section>
     <div class="modal" id="modal"></div>
-    <div class="modalError" id="modalError">qwe</div>
+    <div class="modalError" id="modalError"></div>
     <!-- <footer>
         <article class="footer_top">
             <h4>FOLLOW MINECRAFT</h4>

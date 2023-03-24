@@ -110,5 +110,19 @@
             "discount": 0,
             "age": "all"
         }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "John",
+            "email": "John@gmail.com",
+            "pass": "123321"
+        },
+        {
+            "id": 2,
+            "name": "John",
+            "email": "John@gmail.com",
+            "pass": "123321"
+        }
     ]
 }

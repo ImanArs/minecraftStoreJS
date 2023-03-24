@@ -108,4 +108,20 @@
   margin: 250px auto;
   z-index: 10;
   color: #fff;
+}
+
+#loginTools {
+  position: relative;
+}
+#loginTools .loginTools {
+  top: 10px;
+  left: -50px;
+  background: #fff;
+  position: absolute;
+  width: 300px;
+  border: 1px solid #000;
+}
+#loginTools .loginTools p {
+  margin: 20px auto;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */

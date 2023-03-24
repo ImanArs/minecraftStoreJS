@@ -1,0 +1,26 @@
+body {
+    background: #114f12;
+}
+#productBlock {
+    background: #000;
+    .prodPage {
+        background: #fff;
+        color: #114f12;
+        padding: 40px 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        h2 {
+
+        }
+        .price {
+            del {
+                color: #333;
+                border-bottom: 3px solid red;
+            }
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+    
+    }
+}

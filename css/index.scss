@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 @import "./header/header.css";
 @import "./footer/footer.css";
 @import "./main/main.css";
@@ -7,7 +8,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: minecraft;
+    src: url(../fonts/minecraft.ttf);
+}
+body {
+    font-family: 'Poppins', sans-serif !important;
+    h1{
 
+    }
+    h2 {
+        font-family: minecraft;   
+    }
+    h4 {
+        font-weight: 400;
+    }
+}
 .block {
     background: url("https://cdn.shopify.com/s/files/1/0266/4841/2351/t/27/assets/whiteBottomBlocks.png?v=90429732153909636651668030118");
     background-repeat: no-repeat;

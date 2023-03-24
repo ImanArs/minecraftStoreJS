@@ -8,7 +8,9 @@ let aside = document.getElementById("aside")
 let select = document.getElementById("select")
 let formSearch = document.getElementById("formSearch")
 let inputSearch = document.getElementById("inputSearch")
-
+let userName = document.getElementById('userName')
+let loginTools = document.getElementById('loginTools')
+let login = document.getElementById('login')
 
 // spisok pod headerSearch
 let productBlock = document.getElementById("productBlock")
@@ -21,11 +23,30 @@ let cartWrapper = document.getElementById("cartWrapper")
 let modalError = document.getElementById("modalError")
 
 let cart = []
-let isLogin = false
+let isLogin = {
+    name: 'ibrahim',
+    price: '200'
+}
 
-const changeLogin = () => {
+login.addEventListener("mousemove", () => {
+    loginTools.innerHTML =  `
+        <div class="loginTools" id="loginToolBlock">
+
+            <p>зарегестрироваться</p>
+            <a href="./Login/login.html">войти</a>
+            <button>выйти</button>
+            <button onclick="LoginClose()">закрыть</button>
+        </div>
+    `
+})
+const LoginClose = () => {
+    loginTools.innerHTML = ""
+}
+
+const Login = () => {
     console.log("changed");
-    isLogin = !isLogin
+
+    loginTools.innerHTML =  ""
 }
 
 const getData = () => {
@@ -55,7 +76,8 @@ const modalFunc = (id) => {
             <div class="modalItem_desc">
                 <img src="${data.img}" alt="">
                 <p>${data.desc}</p>
-            </div>
+                <p>${data.price}$</p>
+                </div>
             <div class="buyButton">
                 <button onclick="setFav(${id})">в корзину</button>
             </div>
@@ -78,6 +100,9 @@ const newCard = (title, desc, id, img, price) => {
             <p>$${price}</p>
         </div>
         <div class="buyBox">
+            <a href="./product/product.html" onclick="setProduct(${id})">перейти</a>
+            
+
             <button onclick="setFav(${id})">в корзину</button>
         </div>
         
@@ -154,6 +179,7 @@ function setFav(id) {
         let prevLocal = local ? JSON.parse(local) : []
         let newLocal = [...prevLocal, ...filteredCards]
         localStorage.setItem("product", JSON.stringify(newLocal))
+        
     } else {
         modalError.innerHTML = `
             <div class="modalError_Wrapper">
@@ -175,6 +201,7 @@ function getFav() {
         })
         cartWrapper.innerHTML = cartHtml;
         cartBlock.classList.add("active")
+        closingModal()
     } else {
         console.log(false);
         modalError.innerHTML = `
@@ -182,7 +209,7 @@ function getFav() {
                 <p>вам нужно зарегестрироваться</p>
             </div>
         `
-        setTimeout(closeError, 1500);
+        setTimeout(closeError, 1000);
         
     }
     
@@ -208,3 +235,16 @@ function closeCart() {
     cartBlock.classList.remove("active")
 }
 
+const setProduct = (id) => {
+    localStorage.setItem("productId", id)
+}
+
+if (isLogin !== '') {
+    userName.innerHTML = `
+        <p>${isLogin.name}</p>
+    `
+} else {
+    userName.innerHTML = `
+        <p>auth</p>
+    `
+}

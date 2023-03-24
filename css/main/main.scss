@@ -1,4 +1,6 @@
+
 .products {
+    
     padding-top: 15vh;
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -119,6 +121,21 @@
             margin: 250px auto;
             z-index: 10;
             color: #fff;
+        }
+    }
+}
+#loginTools {
+    position: relative;
+    .loginTools {
+        top: 10px;
+        left: -50px;
+        background: #fff;
+        position: absolute;
+        width: 300px;
+        border: 1px solid #000;
+        p {
+            margin: 20px auto;
+            padding: 10px;
         }
     }
 }
